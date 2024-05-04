@@ -18,7 +18,8 @@ public class PrimeNumber {
         if (num == 1) {
             return true;
         }
-        for (int j = 2; j < num; j++) {
+        //The same, you can check only numbers form 2 to sqrt(num)
+        for (int j = 2; j*j <= num; j++) {
             if (num % j == 0) {
                 return false;
             }
