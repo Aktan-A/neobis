@@ -17,7 +17,9 @@ public class PerfectNumber {
 
     public static boolean checkPerfectNumber(int number) {
         int divisorSum = 0;
-        for (int j = 1; j < number; j++) {
+        //You can check only the half of numbers, bedause when you devide by the
+        //number from other half you still not an int result
+        for (int j = 1; j <= number/2; j++) {
             if (number % j == 0) {
                 divisorSum += j;
             }
